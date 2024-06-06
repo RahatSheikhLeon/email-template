@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- start__style-sheets  -->
+    <style>
+        /* font: IBM Plex Sans ;  */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Play:wght@400;700&family=Syne:wght@400..800&display=swap');
+
+        /* base  */
+        * {
+            padding: 0px;
+            margin: 0px;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "IBM Plex Sans", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .bp-inner__container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        a {
+            cursor: pointer;
+            display: inline-block;
+
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .bp-text-align__right {
+            text-align: right;
+        }
+
+        /* start__style  */
+
+        .bp-wrapper {
+            width: 100%;
+            table-layout: fixed;
+
+        }
+
+        .bp-main {
+            background-color: #fff;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px;
+            border-spacing: 0;
+            padding-bottom: 50px;
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+
+        /* 1st__table--row  */
+        /* hero-table  */
+        .bp-bg__color-blue {
+            background: rgba(110, 88, 247, 1);
+        }
+
+        .bp-hero__table-structure {
+            width: 100%;
+            padding: 55px 0;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+
+        .bp-header__img {
+            max-width: 66px;
+            margin-bottom: 10px;
+        }
+
+        h1.bp-title {
+            color: #fff;
+            font-size: 64px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        p.bp-sub__title {
+            color: rgba(255, 255, 255, 1);
+            font-size: 28px;
+            font-weight: 400;
+            max-width: 930px;
+            padding: 0 10px;
+            margin: 0 auto;
+        }
+
+        /* / hero-table  */
+        /* 2nd__table--row  */
+        .bp-bg__color-white {
+            background-color: #fff;
+        }
+
+        /* invoice table  */
+        /*  invoice info table */
+        .bp-inv__table-info {
+            padding: 55px 0px 0px 0px;
+            margin-bottom: 55px;
+            border-bottom: 1px solid rgba(216, 223, 251, 1);
+        }
+
+        .bp-inv__number {
+            color: rgba(0, 0, 0, 1);
+            font-weight: 300;
+            font-size: 48px;
+            text-align: left;
+        }
+
+        .bp-inv__info {
+            text-align: right;
+        }
+
+        .bp-ive__date,
+        .bp-success {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(43, 39, 72, 1);
+
+        }
+
+        .bp-success {
+            background: rgba(208, 243, 226, 1);
+            padding: 5px 16px;
+            border-radius: 8px;
+            margin-left: 40px;
+        }
+
+        /* / invoice info table  */
+
+        /* invoice invelop table  */
+        .bp-invelop__table {
+            padding-bottom: 60px;
+        }
+
+        .bp-invelop {
+            vertical-align: text-top;
+        }
+
+        .bp-invelop h4,
+        .bp-invelop .bp-name,
+        .bp-invelop .bp-email,
+        .bp-invelop .bp-content,
+        .bp-invelop .bp-address,
+        .bp-invelop .bp-ess__campaign {
+            color: rgba(110, 88, 247, 1);
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .bp-invelop .bp-name {
+            color: rgba(43, 39, 72, 1);
+            margin-bottom: 20px;
+
+        }
+
+        .bp-invelop .bp-email,
+        .bp-invelop .bp-content {
+            color: rgba(43, 39, 72, 1);
+            font-weight: 400;
+            margin-bottom: 14px;
+        }
+
+        .bp-invelop .bp-address {
+            color: rgba(113, 120, 148, 1);
+            font-weight: 400;
+            max-width: 358px;
+        }
+
+        .bp-invelop .bp-ess__campaign {
+            color: rgba(43, 39, 72, 1);
+            margin-bottom: 14px;
+        }
+
+        .bp-invelop .bp-payment__methord {
+            vertical-align: text-top;
+        }
+
+
+        .bp-invelop .bp-payment__methord span {
+            font-size: 22px;
+            color: rgba(43, 39, 72, 1);
+            font-weight: 400;
+            display: inline-block;
+
+        }
+
+        .bp-invelop .bp-payment__methord span img {
+            height: 24px;
+            margin-bottom: -5px;
+        }
+
+        /*/ invoice invelop table  */
+        /* / invoice table  */
+        /* summary title  */
+        .bp-summary__title {
+            font-size: 32px;
+            font-weight: 500;
+            color: rgba(43, 39, 72, 1);
+            text-align: left;
+            padding-bottom: 20px;
+        }
+
+        /* /  summary title  */
+
+        /* Summary table   */
+        .bp-summary__table-wrapper {
+            background: rgba(246, 248, 255, 1);
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+
+        .bp-summary__table {
+            border-collapse: collapse;
+
+        }
+
+        .bp-width__180p {
+            width: 180px;
+        }
+
+        .bp-summary__table-header {
+            color: rgba(113, 120, 148, 1);
+            font-size: 20px;
+            line-height: 2.4;
+            font-weight: 500;
+            border-bottom: 2px solid rgba(193, 200, 228, 1);
+
+        }
+
+        .bp-product__logo {
+            width: 32px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .bp-summary__table-item {
+            border-bottom: 1px solid rgba(193, 200, 228, 1);
+            padding-bottom: 10px;
+            padding-top: 25px;
+
+        }
+
+        .bp-summary__table-item__style {
+            color: rgba(43, 39, 72, 1);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 2.4;
+        }
+
+        .bp-data__output {
+            padding-top: 30px;
+        }
+
+        .bp-width__120p {
+            width: 120px;
+        }
+
+        .bp-table__data-output {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.7;
+            color: rgba(43, 39, 72, 1);
+        }
+
+        /* footer  */
+
+        .bp-footer__table {
+            text-align: left;
+        }
+
+        h2.bp-footer__title {
+            font-size: 32px;
+            font-weight: 400;
+            color: rgba(43, 39, 72, 1);
+            margin-bottom: 24px;
+        }
+
+        a.bp-footer__btn {
+            background: rgba(110, 88, 247, 1);
+            color: #fff;
+            font-size: 22px;
+            font-weight: 500;
+            padding: 20px 90px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+        }
+
+        .bp-footer__power-by{
+            background: rgba(246, 248, 255, 1);
+padding: 55px;
+        }
+
+        h3.td-footer__sub-title{
+            color: rgba(113, 120, 148, 1);
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+
+        h4.powered {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.7;
+            color: rgba(128, 136, 166, 1);
+            margin-bottom: 10px;
+        }
+
+        .bp-footer__table .footer__logo {
+            max-width: 235px;
+        }
+
+        /* / footer  */
+
+
+
+        @media screen and (max-width: 880px) {
+
+
+
+            /* hero-table  */
+            h1.bp-title {
+                font-size: 34px;
+            }
+
+            p.bp-sub__title {
+                font-size: 18px;
+            }
+
+            /*/ hero-table  */
+
+            .bp-inv__number {
+                font-size: 25px;
+            }
+
+            .bp-ive__date,
+            .bp-success {
+                font-size: 16px;
+            }
+
+            .bp-summary__table-wrapper {
+                padding: 12px;
+            }
+
+            .bp-invelop h4,
+            .bp-invelop .bp-name,
+            .bp-invelop .bp-email,
+            .bp-invelop .bp-content,
+            .bp-invelop .bp-address,
+            .bp-invelop .bp-ess__campaign,
+            .bp-invelop .bp-payment__methord span {
+                font-size: 16px;
+                margin-bottom: 8px;
+
+            }
+
+            .bp-summary__title,
+            h2.bp-footer__title  {
+                font-size: 26px;
+            }
+
+            .bp-summary__table-header,
+            a.bp-footer__btn  {
+                font-size: 16px;
+            }
+
+            .bp-summary__table-item__style,
+            .bp-table__data-output {
+                font-size: 14px;
+                line-height: 1.0;
+            }
+
+            td.bp-width__100p-active__tablet{
+                width: 100px;
+            }
+            td.bp-width__80p-active__tablet{
+                width: 80px;
+            }
+
+            h3.td-footer__sub-title{
+            font-size: 18px;
+        }
+
+        }
+
+        @media screen and (max-width: 520px) {
+
+            /* base  */
+            td.bp-width__60p-active__phone {
+                width: 60px;
+            }
+            .bp-text-align__center-active__phone{
+                text-align: center;
+            }
+
+
+            /* hero-table  */
+            h1.bp-title {
+                font-size: 30px;
+            }
+
+            p.bp-sub__title {
+                font-size: 16px;
+            }
+
+            /*/ hero-table  */
+
+            .bp-inv__number {
+                font-size: 18px;
+            }
+
+            .bp-ive__date,
+            .bp-success {
+                font-size: 13px;
+            }
+
+            .bp-summary__table-wrapper {
+                padding: 10px;
+            }
+
+            .bp-invelop h4,
+            .bp-invelop .bp-name,
+            .bp-invelop .bp-email,
+            .bp-invelop .bp-content,
+            .bp-invelop .bp-address,
+            .bp-invelop .bp-ess__campaign,
+            .bp-invelop .bp-payment__methord span {
+                font-size: 13px;
+                margin-bottom: 8px;
+
+            }
+
+            .bp-summary__title,
+            h2.bp-footer__title  {
+                font-size: 23px;
+            }
+
+            .bp-summary__table-header,
+            .abp-footer__btn {
+                font-size: 13px;
+            }
+
+            .bp-summary__table-item__style,
+            .bp-table__data-output {
+                font-size: 12px;
+                line-height: 1.0;
+            }
+
+
+            h3.td-footer__sub-title{
+            font-size: 16px;
+        }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bp-wrapper">
+        <table class="bp-main">
+            <!-- start Better payment  email header  -->
+            <tr>
+                <td class="bp-bg__color-blue bp-hero__table-structure">
+                    <img class="bp-header__img" src="./imgs/tag.png" alt="tag">
+                    <h1 class="bp-title">Thank You! Ricardo Rika</h1>
+                    <p class="bp-sub__title">This is to acknowledge that we have received the payment of [30.00 USD] on [April 16, 2024 8:57 am]</p>
+                </td>
+            </tr>
+            <!-- end Better payment   email header  -->
+
+            <tr>
+                <td class="bp-bg__color-white">
+                    <!-- invoice table -->
+                    <table class="bp-inner__container">
+                        <tr>
+                            <td>
+                                <!-- invoice info table  -->
+                                <table class="bp-inv__table-info"  style="padding-bottom: 5px;">
+                                    <tr>
+                                        <td class="bp-inv__number">
+                                            <span>INV - 100224008</span>
+                                        </td>
+
+                                        <td class="bp-inv__info">
+                                            <span class="bp-ive__date">
+                                                <span style="color:  rgba(113, 120, 148, 1);">Date</span> : <span> 18
+                                                    April 2024</span>
+                                            </span>
+                                            <span>
+                                                <span class="bp-success">Paid</span>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                                <!-- invoice info table  -->
+                                <!-- invoice invelop table  -->
+                                <table class="bp-invelop__table">
+                                    <tr>
+                                        <!-- the receiver  -->
+                                        <td class="bp-invelop">
+                                            <h4>From</h4>
+                                            <h3 class="bp-name">Ricardo Rika</h3>
+                                            <p class="bp-email">alma.lawson@example.com</p>
+                                            <p class="bp-content">(302) 555-0107</p>
+                                            <p class="bp-address">2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                                        </td>
+                                        <!-- / the receiver  -->
+
+                                        <!-- the sender  -->
+                                        <td class="bp-invelop bp-text-align__right">
+                                            <h4>To</h4>
+                                            <h3 class="bp-name">Admin Name</h3>
+                                            <p class="bp-email">essential.addons@ea.com</p>
+                                            <p class="bp-ess__campaign">Essential Addons Active Campaign</p>
+                                            <span class="bp-payment__methord">
+                                                <span>Payment Method</span> : <span><img src="./imgs/sripe.png"
+                                                        alt=""></span>
+                                            </span>
+
+                                        </td>
+
+                                        <!-- / the sender  -->
+                                    </tr>
+                                </table>
+                                <!-- / invoice invelop table  -->
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- / invoice table  -->
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- summary title -->
+                    <div class="bp-inner__container">
+                        <h2 class="bp-summary__title">Transaction Summary:</h2>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- Summary table -->
+                    <div class="bp-inner__container bp-summary__table-wrapper">
+                        <table class=" bp-summary__table">
+                            <tr>
+                                <td>
+                                    <h3 class="bp-summary__table-header">Description</h3>
+                                </td>
+                                <td class="bp-width__180p bp-width__100p-active__tablet bp-width__60p-active__phone">
+                                    <h3 class="bp-summary__table-header bp-text-align__right bp-text-align__center-active__phone">Rate</h3>
+                                </td>
+                                <td class="bp-width__180p bp-width__100p-active__tablet bp-width__60p-active__phone">
+                                    <h3 class=" bp-summary__table-header bp-text-align__right bp-text-align__center-active__phone">Qty</h3>
+                                </td>
+                                <td class="bp-width__180p bp-width__100p-active__tablet bp-width__60p-active__phone">
+                                    <h3 class="bp-summary__table-header bp-text-align__right bp-text-align__center-active__phone">Amount</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class=" bp-summary__table-item">
+                                    <table>
+                                        <tr>
+                                            <td style="width: 50px;"> <span class="bp-product__logo"><img
+                                                        src="./imgs/ess__adns.png" alt=""></span></td>
+                                            <td> <span class="bp-summary__table-item__style">Essential Addons</span>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                                <td class="bp-width__180p bp-width__100p-active__tablet bp-width__60p-active__phone bp-summary__table-item ">
+                                    <h3 class="bp-summary__table-item__style bp-text-align__right bp-text-align__center-active__phone"
+                                        style="font-weight: 500;">$65.00</h3>
+                                </td>
+                                <td
+                                    class="bp-summary__table-item__style bp-width__180p bp-width__100p-active__tablet bp-width__60p-active__phone  bp-summary__table-item ">
+                                    <h3 class="bp-summary__table-item__style bp-text-align__right bp-text-align__center-active__phone"
+                                        style="font-weight: 500;">2</h3>
+                                </td>
+                                <td class="bp-width__180p bp-width__100p-active__tablet bp-width__60p-active__phone  bp-summary__table-item ">
+                                    <h3 class="bp-summary__table-item__style bp-text-align__right bp-text-align__center-active__phone"
+                                        style="font-weight: 500;">$130.00</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class=" bp-summary__table-item">
+                                    <table>
+                                        <tr>
+                                            <td style="width: 50px;"> <span class="bp-product__logo"><img
+                                                        src="./imgs/seo.png" alt=""></span></td>
+                                            <td> <span class="bp-summary__table-item__style">Store SEO - SEO Tool</span>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                                <td class="bp-width__180p bp-width__100p-active__tablet bp-width__60p-active__phone  bp-summary__table-item ">
+                                    <h3 class="bp-summary__table-item__style bp-text-align__right bp-text-align__center-active__phone">$49.00</h3>
+                                </td>
+                                <td
+                                    class="bp-summary__table-item__style bp-width__180p bp-width__100p-active__tablet bp-width__60p-active__phone  bp-summary__table-item ">
+                                    <h3 class="bp-summary__table-item__style bp-text-align__right bp-text-align__center-active__phone">1</h3>
+                                </td>
+                                <td class="bp-width__180p bp-width__100p-active__tablet bp-width__60p-active__phone  bp-summary__table-item ">
+                                    <h3 class="bp-summary__table-item__style bp-text-align__right bp-text-align__center-active__phone">$49.00</h3>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class=" bp-summary__table-item">
+                                    <table>
+                                        <tr>
+                                            <td style="width: 50px;"> <span class="bp-product__logo"><img
+                                                        src="./imgs/ess__adns.png" alt=""></span></td>
+                                            <td> <span class="bp-summary__table-item__style">Essential Addons</span>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                                <td class="bp-width__180p  bp-width__100p-active__tablet bp-width__60p-active__phone bp-summary__table-item ">
+                                    <h3 class="bp-summary__table-item__style bp-text-align__right bp-text-align__center-active__phone">$25.00</h3>
+                                </td>
+                                <td
+                                    class="bp-summary__table-item__style bp-width__180p  bp-width__100p-active__tablet bp-width__60p-active__phone bp-summary__table-item ">
+                                    <h3 class="bp-summary__table-item__style bp-text-align__right bp-text-align__center-active__phone">1</h3>
+                                </td>
+                                <td class="bp-width__180p bp-width__100p-active__tablet bp-width__60p-active__phone bp-summary__table-item ">
+                                    <h3 class="bp-summary__table-item__style bp-text-align__right bp-text-align__center-active__phone">$25.00</h3>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class=" bp-data__output">
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td class="bp-width__120p bp-width__80p-active__tablet"><span class="bp-table__data-output">Subtotal:</span></td>
+                                <td class="bp-width__120p bp-width__80p-active__tablet bp-text-align__right"><span
+                                        class="bp-table__data-output">$204.00</span></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td class="bp-width__120p bp-width__80p-active__tablet"><span class="bp-table__data-output"
+                                        style="color: rgba(113, 120, 148, 1);">Discount 15%</span></td>
+                                <td class="bp-width__120p bp-width__80p-active__tablet bp-text-align__right"><span class="bp-table__data-output"
+                                        style="color: rgba(113, 120, 148, 1);">$30.00</span></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td class="bp-width__120p bp-width__80p-active__tablet"><span class="bp-table__data-output"
+                                        style="color: rgba(113, 120, 148, 1);">Tax:</span></td>
+                                <td class="bp-width__120p bp-width__80p-active__tablet bp-text-align__right"><span class="bp-table__data-output"
+                                        style="color: rgba(113, 120, 148, 1);">00.00</span></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td class="bp-width__120p bp-width__80p-active__tablet"><span class="bp-table__data-output">Total:</span></td>
+                                <td class="bp-width__120p bp-width__80p-active__tablet bp-text-align__right"><span
+                                        class="bp-table__data-output">$174.00</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            <!-- footer  -->
+            <tr>
+                <td>
+                    <div class="bp-inner__container bp-footer__table">
+                        <h2 class="bp-footer__title">You can also find the transaction history visiting</h2>
+                        <a class="bp-footer__btn" href="#">View Transaction</a>
+
+                 
+                            <table class="bp-footer__power-by">
+                                <tr>
+                                    <td colspan="2"><h3 class="td-footer__sub-title">Just another WordPress site.</h3></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 120px;">
+                                        <h4 class="powered">Powered By</h4>
+                                      
+                                    </td>
+                                    <td>
+                                        <img class="footer__logo" src="imgs/Logo.png" alt="">
+                                    </td>
+                                </tr>
+                            </table>
+                   
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
